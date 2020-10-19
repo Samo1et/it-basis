@@ -15,10 +15,18 @@ import Grid from '@material-ui/core/Grid';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems } from './listItems';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
+import { LinkItem } from './listItems'
+import {
+  Assessment,
+  Home,
+  DeveloperBoard,
+  BugReport,
+  Brush,
+  Code,
+  PhoneInTalk,
+  ThumbUp,
+  Backup
+} from '@material-ui/icons'
 
 const drawerWidth = 240;
 
@@ -113,20 +121,17 @@ const TITLE_BY_PATH = {
     '/support': 'Направляем пользователей на истиный путь'
 };
 
-
-
-
-export const LinkItem = ({activePath, pathname, title, icon, onClick}) => {
-    const isActive = activePath === pathname;
-    return (
-        <ListItem onClick={() => onClick(pathname)} button selected={isActive} ContainerComponent={'li'}>
-            <ListItemIcon color={isActive ? 'primary' : 'default'}>
-                {icon}
-            </ListItemIcon>
-            <ListItemText primary={title} color={isActive ? 'primary' : 'default'}/>
-        </ListItem>
-    );
-};
+const listLinks = [
+  { pathname: '/', icon: <Home />, title: 'Главная' },
+  { pathname: '/analysis', icon: <Assessment />, title: 'Аналитика' },
+  { pathname: '/design', icon: <Brush />, title: 'Дизайн' },
+  { pathname: '/develop', icon: <Code />, title: 'Программирование' },
+  { pathname: '/devops', icon: <Backup />, title: 'DevOps' },
+  { pathname: '/management', icon: <DeveloperBoard />, title: 'Менеджмент' },
+  { pathname: '/marketing', icon: <ThumbUp />, title: 'Маркетинг' },
+  { pathname: '/support', icon: <PhoneInTalk />, title: 'Сопровождение' },
+  { pathname: '/test', icon: <BugReport />, title: 'Тестирвание' }
+];
 
 export default function Dashboard({children, pathname}) {
   const classes = useStyles();
@@ -177,7 +182,7 @@ export default function Dashboard({children, pathname}) {
           </IconButton>
         </div>
         <Divider />
-        <List>{mainListItems}</List>
+        <List>{listLinks.map(linkProps => <LinkItem key={linkProps.pathname} {...linkProps} />)}</List>
         <Divider />
       </Drawer>
       <main className={classes.content}>
