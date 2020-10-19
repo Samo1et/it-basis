@@ -16,6 +16,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { LinkItem } from './listItems'
+import Wizard from '../Wizard'
 import {
   Assessment,
   Home,
@@ -27,6 +28,7 @@ import {
   ThumbUp,
   Backup
 } from '@material-ui/icons'
+
 
 const drawerWidth = 240;
 
@@ -136,7 +138,6 @@ const listLinks = [
 export default function Dashboard({children, pathname}) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
-
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -189,7 +190,9 @@ export default function Dashboard({children, pathname}) {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
+            <Wizard >
             {children}
+            </Wizard>
           </Grid>
         </Container>
       </main>

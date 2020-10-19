@@ -1,15 +1,19 @@
-import { createStore as reduxCreateStore } from "redux"
+import { createStore as reduxCreateStore, applyMiddleware } from "redux"
+import { composeWithDevTools } from 'redux-devtools-extension'
+import thunkMiddleware from 'redux-thunk'
+import { combineReducers } from 'redux'
+import {wizardReducer} from './wizardModule'
 
-const reducer = (state, action) => {
-  if (action.type === `INCREMENT`) {
-    return Object.assign({}, state, {
-      count: state.count + 1,
-    })
-  }
-  return state
-}
 
-const initialState = { count: 0 }
+const reducers = combineReducers({
+    wizard: wizardReducer
+  })
 
-const createStore = () => reduxCreateStore(reducer, initialState)
+const initialState = { }
+
+const createStore = () => reduxCreateStore(
+    reducers,
+    initialState,
+    composeWithDevTools(applyMiddleware(thunkMiddleware))
+)
 export default createStore
