@@ -2,6 +2,7 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Layout from '../components/Layout'
 import Typography from '@material-ui/core/Typography';
+import Link from '../components/Link'
 
 export default function Index({location}) {
   return (
@@ -10,6 +11,10 @@ export default function Index({location}) {
         <Typography>
           Hello World!
         </Typography>
+        <div>
+          <Link asButton to="/analysis">Run</Link>
+        </div>
+        
       </Container>
     </Layout>
   );

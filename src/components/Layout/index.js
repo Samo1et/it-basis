@@ -125,8 +125,8 @@ const TITLE_BY_PATH = {
 const listLinks = [
   { pathname: '/', icon: <Home />, title: 'Главная' },
   { pathname: '/analysis', icon: <Assessment />, title: 'Аналитика' },
-  { pathname: '/design', icon: <Brush />, title: 'Дизайн' },
   { pathname: '/management', icon: <DeveloperBoard />, title: 'Менеджмент' },
+  { pathname: '/design', icon: <Brush />, title: 'Дизайн' },
   { pathname: '/develop', icon: <Code />, title: 'Программирование' },
   { pathname: '/test', icon: <BugReport />, title: 'Тестирвание' },
   { pathname: '/devops', icon: <Backup />, title: 'DevOps' },

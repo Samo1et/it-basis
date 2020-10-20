@@ -92,9 +92,7 @@ export const step3=[
 export const step4=[
     <div>
         <Typography variant="h4">Игра. Угадай цвет </Typography>
-
         <p>Нужно найти разницу в оттенке цвета</p>
-        
         <p>Примеры</p>
         <ul>
             <li> <Link href='http://kolor.moro.es/'>http://kolor.moro.es/</Link> </li>

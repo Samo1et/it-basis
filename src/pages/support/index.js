@@ -10,16 +10,15 @@ const stepContent = [
   step1,step2,step3,step4
 ]
 
-export default function Design({location}) {
+export default function Support({location}) {
   return (
     <Layout pathname={location.pathname}>
       <Container maxWidth="sm">
         <Typography>
-          Дизайнер
+        Служба поддержки. Support
         </Typography>
-        <Steps steps={steps} stepContent={stepContent} nextPath={'/develop'} finalStep={finalStep}/>
+        <Steps steps={steps} stepContent={stepContent} nextPath={'/final'} finalStep={finalStep}/>
       </Container>
     </Layout>
   );
 }
-
