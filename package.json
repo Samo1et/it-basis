@@ -9,6 +9,7 @@
     "gatsby": "latest",
     "gatsby-plugin-material-ui": "latest",
     "gatsby-plugin-react-helmet": "latest",
+    "prop-types": "^15.7.2",
     "react": "latest",
     "react-dom": "latest",
     "react-helmet": "latest",

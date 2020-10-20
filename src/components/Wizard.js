@@ -8,7 +8,6 @@ import { useSelector } from 'react-redux'
 export default function Wizard({children}) {
     const dispatch = useDispatch()
     const state = useSelector((state) => state)
-    console.log(state.wizard.activeStepId)
     return (
         <Container>
             <div>

@@ -9,14 +9,13 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import NotificationsIcon from '@material-ui/icons/Notifications';
+
 import { LinkItem } from './listItems'
-import Wizard from '../Wizard'
+
 import {
   Assessment,
   Home,
@@ -127,12 +126,12 @@ const listLinks = [
   { pathname: '/', icon: <Home />, title: 'Главная' },
   { pathname: '/analysis', icon: <Assessment />, title: 'Аналитика' },
   { pathname: '/design', icon: <Brush />, title: 'Дизайн' },
-  { pathname: '/develop', icon: <Code />, title: 'Программирование' },
-  { pathname: '/devops', icon: <Backup />, title: 'DevOps' },
   { pathname: '/management', icon: <DeveloperBoard />, title: 'Менеджмент' },
+  { pathname: '/develop', icon: <Code />, title: 'Программирование' },
+  { pathname: '/test', icon: <BugReport />, title: 'Тестирвание' },
+  { pathname: '/devops', icon: <Backup />, title: 'DevOps' },
   { pathname: '/marketing', icon: <ThumbUp />, title: 'Маркетинг' },
   { pathname: '/support', icon: <PhoneInTalk />, title: 'Сопровождение' },
-  { pathname: '/test', icon: <BugReport />, title: 'Тестирвание' }
 ];
 
 export default function Dashboard({children, pathname}) {
@@ -144,7 +143,6 @@ export default function Dashboard({children, pathname}) {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
@@ -163,11 +161,11 @@ export default function Dashboard({children, pathname}) {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             {TITLE_BY_PATH[pathname]}
           </Typography>
-          <IconButton color="inherit">
+          {/* <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
             </Badge>
-          </IconButton>
+          </IconButton> */}
         </Toolbar>
       </AppBar>
       <Drawer
@@ -183,16 +181,14 @@ export default function Dashboard({children, pathname}) {
           </IconButton>
         </div>
         <Divider />
-        <List>{listLinks.map(linkProps => <LinkItem key={linkProps.pathname} {...linkProps} />)}</List>
+        <List>{listLinks.map(linkProps => <LinkItem key={linkProps.pathname} {...linkProps} activePath={pathname} />)}</List>
         <Divider />
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
-            <Wizard >
             {children}
-            </Wizard>
           </Grid>
         </Container>
       </main>
