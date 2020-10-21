@@ -12,7 +12,7 @@ export default function Index({location}) {
           Это все, спасибо за участие!
         </Typography>
         <div>
-          <Link asButton to="/analysis">Повторить</Link>
+          <Link to="/analysis">Повторить</Link>
         </div>
       </Container>
     </Layout>

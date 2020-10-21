@@ -129,10 +129,14 @@ const listLinks = [
   { pathname: '/design', icon: <Brush />, title: 'Дизайн' },
   { pathname: '/develop', icon: <Code />, title: 'Программирование' },
   { pathname: '/test', icon: <BugReport />, title: 'Тестирвание' },
+];
+
+const addLink = [
+  { pathname: '/test', icon: <BugReport />, title: 'Тестирвание' },
   { pathname: '/devops', icon: <Backup />, title: 'DevOps' },
   { pathname: '/marketing', icon: <ThumbUp />, title: 'Маркетинг' },
   { pathname: '/support', icon: <PhoneInTalk />, title: 'Сопровождение' },
-];
+]
 
 export default function Dashboard({children, pathname}) {
   const classes = useStyles();

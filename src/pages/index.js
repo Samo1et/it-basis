@@ -11,10 +11,19 @@ export default function Index({location}) {
         <Typography>
           Hello World!
         </Typography>
+        <p>
+          Привет, это приложение прольет свет на работу в IT.
+        </p>
+        <p>
+          Открою маленький секрет, в IT работают не только программисты, 
+          для проекта средних масштабов потребуется команда специалистов.
+        </p>
+        <p>
+          Предлагаю пройти путь путь создания интернет магазина, за одно узнать об участниках
+        </p>
         <div>
-          <Link asButton to="/analysis">Run</Link>
+          <Link to="/analysis">Поехали</Link>
         </div>
-        
       </Container>
     </Layout>
   );
