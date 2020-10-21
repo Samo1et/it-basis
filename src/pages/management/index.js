@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 import Layout from '../../components/Layout'
 import Typography from '@material-ui/core/Typography';
 import Steps from '../../components/Steps'
-import {step1, step2,step3,step4,step5,finalStep} from './steps'
+import {step1, step2,step3,step4,step5,finalStep} from '../../steps/management/steps'
 
 const steps = ['Должность', 'Требования', 'Сортировка','Задачи', 'Get-Kanban']
 const stepContent = [
