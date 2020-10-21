@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/it-basis',
   plugins: [
     'gatsby-plugin-top-layout',
     {
