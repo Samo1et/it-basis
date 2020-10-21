@@ -74,4 +74,11 @@ export const step5 = [
 ];
 
 
-export const finalStep = [];
+export const finalStep = [
+    <div>
+        <p>
+            Менеджер добавил задач на доске и все стало веселее.
+            Можно приступать к выполнению задач.
+        </p>
+    </div>
+];

@@ -61,21 +61,13 @@ export const step3 = [
          <p>Backend-разработчик – это интересная и перспективная профессия для тех, кому нравится логика, математика, разработка алгоритмов.</p>
          <p>Что нужно:</p>
          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            Знание хотя бы одного «серверного» языка программирования: PHP, Go, ASP.NET, C/C++, Python, Ruby, Java. В некоторых случаях достаточно знания JavaScript для бэкенда (Node.js), но это скорее как плюс, чем как пункт.
-Знание API (REST, SOAP — всё реже).
-Понимание принципов работы серверов Apache, NGINX, IIS и проч.
-Навыки написания юнит-тестов и покрытия кода тестами.
-Основы сетевой безопасности и знание инструментов её обеспечения.
-Знание популярных веб-фрейморков, которые способны решать задачи разработки конкретного приложения.
-Навыки написания запросов к БД и проектирования баз данных.
-
+            <li>Знание хотя бы одного «серверного» языка программирования: PHP, Go, ASP.NET, C/C++, Python, Ruby, Java. В некоторых случаях достаточно знания JavaScript для бэкенда (Node.js), но это скорее как плюс, чем как пункт.</li>
+            <li>Знание API (REST, SOAP — всё реже).</li>
+            <li>Понимание принципов работы серверов Apache, NGINX, IIS и проч.</li>
+            <li>Навыки написания юнит-тестов и покрытия кода тестами.</li>
+            <li>Основы сетевой безопасности и знание инструментов её обеспечения.</li>
+            <li>Знание популярных веб-фрейморков, которые способны решать задачи разработки конкретного приложения.</li>
+            <li>Навыки написания запросов к БД и проектирования баз данных.</li>
         </ul>
     </div>
 ];
@@ -83,9 +75,14 @@ export const step4 = [
 <div>
     <Typography variant="h4">Игра. FlexBox Froggy</Typography>
     <p>Проходим по основам html и css</p>
-    <Link href="Пример https://flexboxfroggy.com/#ru">Пример https://flexboxfroggy.com/#ru</Link>
-    <Link href="http://cssgridgarden.com/#ru">Пример 2</Link>
-    <Link href="https://github.com/thomaspark/gridgarden/">Пример 3</Link>
+    <ul>
+        <li><Link target="_blank" href="Пример https://flexboxfroggy.com/#ru">Пример https://flexboxfroggy.com/#ru</Link></li>
+        <li><Link target="_blank" href="http://cssgridgarden.com/#ru">Пример 2</Link></li>
+        <li><Link target="_blank" href="https://github.com/thomaspark/gridgarden/">Пример 3</Link></li>
+    </ul>
+   
+    
+    
 </div>
 ];
 export const step5 = [

@@ -9,7 +9,7 @@ export const step1 = [
         <p>
             <b>User Experience и User Interface</b> - это дизайн пользовательского опыта и пользовательских интерфейсов. Эти понятия часто приравнивают друг к другу, однако между ними есть существенная разница.
       UX-дизайнер создает систему и структурирует информацию, а дизайнер интерфейса оформляет эту систему, придавая ей форму и цвет. Если обобщить, UX-дизайнер отвечает за то, как продукт работает, а UI-дизайнер - за внешний вид продукта.
-      Web-дизайн
+      "Web-дизайн"
       </p>
         <Typography variant="h4">Web-дизайн</Typography>
         <p>
@@ -44,7 +44,7 @@ export const step2=[
             <br/>
             Пример
             <ul>
-                <li> <Link href='https://www.pixact.ly/'>https://www.pixact.ly/</Link> </li>
+                <li> <Link target="_blank" href='https://www.pixact.ly/'>https://www.pixact.ly/</Link> </li>
             </ul>
          </p>
     </div>
@@ -95,9 +95,9 @@ export const step4=[
         <p>Нужно найти разницу в оттенке цвета</p>
         <p>Примеры</p>
         <ul>
-            <li> <Link href='http://kolor.moro.es/'>http://kolor.moro.es/</Link> </li>
-            <li> <Link href='https://www.xrite.com/hue-test'>https://www.xrite.com/hue-test</Link> </li>
-            <li> <Link href='https://meduza.io/games/tsvet-nastroeniya-krasnyy-igra-meduzy'>meduza</Link> </li>
+            <li> <Link target="_blank" href='http://kolor.moro.es/'>http://kolor.moro.es/</Link> </li>
+            <li> <Link target="_blank" href='https://www.xrite.com/hue-test'>https://www.xrite.com/hue-test</Link> </li>
+            <li> <Link target="_blank" href='https://meduza.io/games/tsvet-nastroeniya-krasnyy-igra-meduzy'>meduza</Link> </li>
         </ul>
         
     </div>
