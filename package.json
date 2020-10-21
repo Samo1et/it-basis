@@ -24,6 +24,7 @@
     "buildPP": "gatsby build --prefix-paths",
     "postbuild": "mv public docs",
     "serve": "gatsby serve",
+    "servePP": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   }

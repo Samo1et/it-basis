@@ -111,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const TITLE_BY_PATH = {
-    '/': 'Цикл разработботки в IT',
+    '/': 'Цикл разработки в IT',
     '/analysis': 'Сбор и анализ требований',
     '/management': 'Распределяем задачи',
     '/design': 'Играемся со шрифтами',
@@ -128,17 +128,16 @@ const listLinks = [
   { pathname: '/management', icon: <DeveloperBoard />, title: 'Менеджмент' },
   { pathname: '/design', icon: <Brush />, title: 'Дизайн' },
   { pathname: '/develop', icon: <Code />, title: 'Программирование' },
-  { pathname: '/test', icon: <BugReport />, title: 'Тестирвание' },
+  { pathname: '/test', icon: <BugReport />, title: 'Тестирование' },
 ];
 
 const addLink = [
-  { pathname: '/test', icon: <BugReport />, title: 'Тестирвание' },
   { pathname: '/devops', icon: <Backup />, title: 'DevOps' },
   { pathname: '/marketing', icon: <ThumbUp />, title: 'Маркетинг' },
   { pathname: '/support', icon: <PhoneInTalk />, title: 'Сопровождение' },
 ]
 
-export default function Dashboard({children, pathname}) {
+export default function Dashboard({children, pathname = ''}) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -147,7 +146,7 @@ export default function Dashboard({children, pathname}) {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-
+  const pagePathname = pathname.replace('/it-basis','');
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -163,7 +162,7 @@ export default function Dashboard({children, pathname}) {
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            {TITLE_BY_PATH[pathname]}
+            {TITLE_BY_PATH[pagePathname]}
           </Typography>
           {/* <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
