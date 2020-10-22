@@ -1,5 +1,8 @@
 module.exports = {
   pathPrefix: '/it-basis',
+  siteMetadata: {
+    siteUrl: 'https://samo1et.github.io/it-basis'
+  },
   plugins: [
     'gatsby-plugin-top-layout',
     {
@@ -10,10 +13,12 @@ module.exports = {
         // },
       },
     },
-
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', Disallow: '/' }]
+      }
+    },
     'gatsby-plugin-react-helmet',
-  ],
-  siteMetadata: {
-    title: 'My page',
-  },
+  ]
 };
